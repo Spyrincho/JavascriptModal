@@ -1,0 +1,176 @@
+body{
+  background-color: grey;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 1em;
+  padding: 1em;
+  justify-items: center;
+}
+
+/* Grote h1, tot login/regristreer */
+h1 {
+  grid-column: 1/-3;
+}
+
+/* album opmaken */
+.albumCover {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 80vw;
+  grid-gap: 1em;
+}
+
+img{
+  max-width: 50%;
+  max-height: 50%;
+}
+.grid img {
+  max-width: 80%;
+}
+
+/* verklein img van modale */
+img.modaalKnop {
+  max-width: 1px;
+}
+
+.modaalKnop:hover {
+  cursor: pointer;
+}
+
+/* Modale venster */
+.container .modaalContent {
+  display: none;
+}
+
+.modaalAchtergrond {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  /*background-color: rgba(0, 0, 0, 0.8);*/
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  animation: blackout .3s forwards;
+}
+
+.modaal {
+  max-width: 80%;
+  padding: 1em;
+  /*border-radius: 2em;*/
+  background-color: #fff;
+  animation: rounding .5s forwards;
+}
+
+.sluitKnop {
+  position: relative;
+  left: 95%;
+  cursor: pointer;
+}
+
+.time {
+  float: right;
+}
+
+@keyframes blackout {
+  10% {
+    background-color: rgba(0, 0, 0, 0.08)
+  }
+
+  20% {
+    background-color: rgba(0, 0, 0, 0.16)
+  }
+
+  30% {
+    background-color: rgba(0, 0, 0, 0.24)
+  }
+
+  40% {
+    background-color: rgba(0, 0, 0, 0.32)
+  }
+
+  50% {
+    background-color: rgba(0, 0, 0, 0.40)
+  }
+
+  60% {
+    background-color: rgba(0, 0, 0, 0.48)
+  }
+
+  70% {
+    background-color: rgba(0, 0, 0, 0.56)
+  }
+
+  80% {
+    background-color: rgba(0, 0, 0, 0.64)
+  }
+
+  90% {
+    background-color: rgba(0, 0, 0, 0.72)
+  }
+
+  100% {
+    background-color: rgba(0, 0, 0, 0.8)
+  }
+}
+
+@keyframes rounding {
+  10% {
+    border-radius: 0.2em
+  }
+
+  20% {
+    border-radius: 0.4em
+  }
+
+  30% {
+    border-radius: 0.6em
+  }
+
+  40% {
+    border-radius: 0.8em
+  }
+
+  50% {
+    border-radius: 1em
+  }
+
+  60% {
+    border-radius: 1.2em
+  }
+
+  70% {
+    border-radius: 1.4em
+  }
+
+  80% {
+    border-radius: 1.6em
+  }
+
+  90% {
+    border-radius: 1.8em
+  }
+
+  100% {
+    border-radius: 2em
+  }
+}
+
+.registerLink {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.container img{
+  padding: 20px;
+  margin: 20px;
+  max-width: 116px;
+  max-height: 116px;
+  min-width: 116px;
+  min-height: 116px;
+}
