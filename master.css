@@ -32,26 +32,25 @@ img{
 }
 
 /* verklein img van modale */
-img.modaalKnop {
+img.modaalButton {
   max-width: 1px;
 }
 
-.modaalKnop:hover {
+.modaalButton:hover {
   cursor: pointer;
 }
 
 /* Modale venster */
-.container .modaalContent {
+.container .modalContent {
   display: none;
 }
 
-.modaalAchtergrond {
+.modaalBackground {
   position: absolute;
   top: 0;
   left: 0%;
   width: 100vw;
   height: 100vh;
-  /*background-color: rgba(0, 0, 0, 0.8);*/
   display: grid;
   justify-items: center;
   align-items: center;
@@ -66,14 +65,10 @@ img.modaalKnop {
   animation: rounding .5s forwards;
 }
 
-.sluitKnop {
+.sluitButton {
   position: relative;
   left: 95%;
   cursor: pointer;
-}
-
-.time {
-  float: right;
 }
 
 @keyframes blackout {
@@ -164,6 +159,7 @@ img.modaalKnop {
   color: blue;
   text-decoration: underline;
   cursor: pointer;
+  float: right;
 }
 
 .container img{
